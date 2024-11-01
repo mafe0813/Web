@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+  <title>CARNES B&R</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/icono.jpeg" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Aquí puedes agregar tu CSS personalizado */
+    .rd-navbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-left: 20px;
+    }
+
+    .cart-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+    }
+
+    .cart-button img {
+      max-width: 100%;
+      max-height: 100%;
+      margin-right: -4px;
+    }
+
+    .login-button {
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: white;
+      background-color: #ff4c4c;
+      transition: background-color 0.3s;
+    }
+
+    .login-button:hover {
+      background-color: #ff3333;
+    }/* Estilos para el botón de cargar pedidos */
+  #boton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #boton:hover {
+    background-color: #0056b3;
+  }
+
+  /* Centrando el div de resultados */
+  #resultado {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .rd-navbar-nav {
+      flex-direction: column;
+    }
+
+    .nav-actions {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+    
+  </style>
+    <script>
+        function cargarPedidos() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "php/pedido.php", true); // Cambia "tu_archivo_php.php" por el nombre de tu archivo PHP
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("resultado").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="wrapper-triangle">
+      <div class="pen">
+        <div class="line-triangle">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+        <div class="line-triangle">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+        <div class="line-triangle">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+
+    <!-- Page Header-->
+    <header class="section page-header">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+          data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="56px" data-xl-stick-up-offset="56px"
+          data-xxl-stick-up-offset="56px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-inner-outer">
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark"
+                      src="logoC.png" alt="" width="198" height="66" /></a></div>
+              </div>
+              <div class="rd-navbar-right rd-navbar-nav-wrap">
+                <div class="rd-navbar-aside">
+                  <ul class="rd-navbar-contacts-2">
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
+                        <div class="unit-body"><a class="phone" href="tel:#">+573182575587</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+                        <div class="unit-body"><a class="address" href="#">Calle 79b#70A-31</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-share-2">
+                    <li><a class="icon mdi mdi-facebook" href="#"></a></li>
+                    <li><a class="icon mdi mdi-twitter" href="#"></a></li>
+                    <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+                    <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+                  </ul>
+                </div>
+                <div class="rd-navbar-main">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Detalle de Pedidos</a></li>
+                    <li class="rd-nav-item navbar-cart">
+                      <div class="nav-actions">
+                        <a href="cerarSesion.php" class="btn btn-primary login-button">Cerrar sesion</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Sección para mostrar la tabla de pedidos -->
+    <section class="section">
+      <div class="container">
+        <h2>Pedidos</h2>
+          <button id = " boton " onclick="cargarPedidos()">Cargar Pedidos</button>
+          <div id="resultado"></div>
+
+      </div>
+    </section>
+
+    <footer class="section footer-classic context-dark bg-image" style="background: #1a1a1a;">
+      <div class="container">
+        <div class="row row-30">
+          <div class="col-md-3 col-xl-4">
+            <h5>Acerca de Nosotros</h5>
+            <p>Nos especializamos en ofrecer la mejor carne de res en el mercado. Nuestros productos son de la más alta calidad.</p>
+            <p class="rights"><span>&#169;</span><span> 2024 Carnes B&R</span></p>
+          </div>
+          <div class="col-md-3 col-xl-4">
+            <h5>Enlaces útiles</h5>
+            <ul class="list list-marked">
+              <li><a href="index.php">Inicio</a></li>
+              <li><a href="about-us.html">Sobre Nosotros</a></li>
+              <li><a href="contacts.html">Contáctanos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-xl-4">
+            <h5>Contáctanos</h5>
+            <ul class="list list-marked">
+              <li>Teléfono: +573182575587</li>
+              <li>Email: info@carnesbr.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Script -->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
